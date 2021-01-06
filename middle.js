@@ -18,7 +18,7 @@ const assertArraysEqual = function(array1, array2, expected) {
   }
 };
 
-//the middle function should return an array with only the 
+//the middle function should return an array with only the
 //middle element(s) of the provided array.
 //This means the length of the returned elements could vary
 
@@ -29,13 +29,11 @@ const middle = function(array) {
 
   if (array.length <= 2) { // checks array length
     return []; // returns empty array
-  } else if (array.length > 2 && array.length % 2 != 0){ // checks array length and checks that array is odd
-    console.log("ahhhh"); // test
+  } else if (array.length % 2 !== 0) { // checks array length and checks that array is odd
     return [array[mid]];
-  } else if (array.length > 2 && array.length % 2 === 0) { // checks array length and checks that array is even
-    console.log("yaaaas") // test
+  } else { // checks array length and checks that array is even
     return [array[mid - 1], array[mid]];
   }
-}
+};
 
 console.log(middle([1, 5, 19, 2, 3, 4]));
