@@ -27,11 +27,11 @@ const middle = function(array) {
 
   let mid = Math.floor(array.length / 2);
 
-  if (array.length <= 2) { // checks array length
-    return []; // returns empty array
-  } else if (array.length % 2 !== 0) { // checks array length and checks that array is odd
+  if (array.length <= 2) {
+    return [];
+  } else if (array.length % 2 !== 0) {
     return [array[mid]];
-  } else { // checks array length and checks that array is even
+  } else {
     return [array[mid - 1], array[mid]];
   }
 };
