@@ -1,27 +1,5 @@
-const eqArrays = function(array1, array2) {
-  if (array1.length !== array2.length) {
-    return false;
-  }
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return false;
-    }
-  } return true;
-};
-
-const assertArraysEqual = function(array1, array2, expected) {
-  const actual = eqArrays(array1, array2);
-  if (actual === expected) { // checking if eqArrays is true
-    console.log(`🥳🥳🥳 Assertion Passed: ${actual} === ${expected}`); //if true console log this
-  } else {
-    console.log(`🤬🤬🤬 Assertion Failed: ${actual} !== ${expected}`); //else console log this
-  }
-};
-
-//the middle function should return an array with only the
-//middle element(s) of the provided array.
-//This means the length of the returned elements could vary
-
+const eqArrays = require('./eqArrays')
+const assertArraysEqual = require('./assertArraysEqual')
 
 const middle = function(array) {
 
@@ -36,4 +14,4 @@ const middle = function(array) {
   }
 };
 
-console.log(middle([1, 5, 19, 2, 3, 4]));
+module.exports = middle;
