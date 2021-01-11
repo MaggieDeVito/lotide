@@ -7,3 +7,5 @@ const findKey = function(object, solution) {
     }
   } return key;
 };
+
+module.exports = findKey;

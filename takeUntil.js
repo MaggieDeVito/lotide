@@ -10,3 +10,4 @@ const takeUntil = function (array, predicate) {
   return newArray;
 };
 
+module.exports = takeUntil;

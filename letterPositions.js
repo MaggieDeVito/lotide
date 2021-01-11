@@ -14,7 +14,4 @@ const letterPositions = function(sentance) {
   return results;
 };
 
-// function that will return all indices in the string
-// where the characters are found
-
-console.log(letterPositions("lighthouse in the house"));
+module.exports = letterPositions;

@@ -1,13 +1,14 @@
 const assert = require('chai').assert;
 const tail  = require('../tail');
 
-describe("tail", () => {
-  it("returns 7 for [5, 6, 7]", () => {
-    assert.strictEqual(tail([5, 6, 7]), 7);
+describe("#tail", () => {
+
+  it("returns [6, 7] for [5, 6, 7]", () => {
+    assert.deepEqual(tail([5, 6, 7]), [6, 7]);
   });
 
-  it("returns 'Labs' for ['Hello', 'Lighthouse', 'Labs']", () => {
-    assert.strictEqual(tail(['Hello', 'Lighthouse', 'Labs']), 'Labs');
+  it("returns ['Lighthouse', 'Labs'] for ['Hello', 'Lighthouse', 'Labs']", () => {
+    assert.deepEqual(tail(['Hello', 'Lighthouse', 'Labs']), ['Lighthouse', 'Labs']);
   });
 
 });

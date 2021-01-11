@@ -1,6 +1,7 @@
 const tail = function(data) {
-  return data[data.length-1];
+  return data.slice(1);
 };
 
 module.exports = tail;
 
+console.log(tail([1, 2, 3]));
